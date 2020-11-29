@@ -3,7 +3,8 @@
 This is project started as part of [CTC21: Put Your City on the Map](https://github.com/CodeTheCity/CTC21), which ran Saturday 28th Nov 2020 and Sunday 29th Nov 2020.
 
 There are a hundreds of ship wrecks off the coast of Scotland which could be seen from [Marine Scotland's website](https://marinescotland.atkinsgeospatial.com/nmpi/default.aspx?layers=577)
-![Marine Scotland Wrecks extract](/CTC21/MarineScotlandWrecks.png 150x150)
+
+![Marine Scotland Wrecks extract](/CTC21/MarineScotlandWrecks.png)
 
 In [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) the position is quite different with only a few wrecks being logged. The information was dervied from running the following queries in Wikidata : https://w.wiki/nDp and https://w.wiki/nDt
 
