@@ -9,7 +9,6 @@ There are a hundreds of ship wrecks off the coast of Scotland which could be see
 In [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) the position is quite different with only a few wrecks being logged. The information was dervied from running the following queries in Wikidata : https://w.wiki/nDp and https://w.wiki/nDt
 
 <img src="/CTC21/Wikidata_start.png" width="500">
-![Wikidata extract](/CTC21/Wikidata_start.png)
 
 ## Day one - sourcing the information of the wrecks. 
 During the research, maps with shipwrecks plotted were found but what was required was the source data.
