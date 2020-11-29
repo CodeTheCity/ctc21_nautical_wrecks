@@ -6,7 +6,7 @@ There are a hundreds of ship wrecks off the coast of Scotland which could be see
 
 <img src="/CTC21/MarineScotlandWrecks.png" width="500">
 
-In [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) the position is quite different with only a few wrecks being logged. The information was dervied from running the following queries in Wikidata : https://w.wiki/nDp and https://w.wiki/nDt
+In [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) the position is quite different with only a few wrecks being logged. The information for the image below was dervied from running the following queries in Wikidata : https://w.wiki/nDp and https://w.wiki/nDt
 
 <img src="/CTC21/Wikidata_start.png" width="500">
 
