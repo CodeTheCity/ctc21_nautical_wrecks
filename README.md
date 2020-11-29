@@ -10,7 +10,7 @@ Add image
 
 ## Day one - sourcing the information of the wrecks. 
 During the research, maps with shipwrecks plotted were found but what was required was the source data.
-Data on [Marine Scotland](http://marine.gov.scot/information/wrecks-hes), [Aberdeenshire Council's website] (https://online.aberdeenshire.gov.uk/smrpub/master/search.aspx) and on [Canmore's website](http://portal.historicenvironment.scot/downloads/canmore) were considered. 
+Data on [Marine Scotland](http://marine.gov.scot/information/wrecks-hes), [Aberdeenshire Council's website](https://online.aberdeenshire.gov.uk/smrpub/master/search.aspx) and on [Canmore's website](http://portal.historicenvironment.scot/downloads/canmore) were considered. 
 Once data was found, the next stage was finding out the licencing rights and whether or not the data could be uplifted. The data found on Canmore's website indicated that it was Open Government Licence hence could be uploaded to Wikidata. This is the data source which was then used on day two of the project. 
 A training session on how to use Wikidata was also required on day one to allow the team to understand how to upload the data to Wikidata and how the identifiers etc worked.
 
