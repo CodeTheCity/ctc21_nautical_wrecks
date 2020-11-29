@@ -11,7 +11,7 @@ In [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) the position is 
 <img src="/CTC21/Wikidata_start.png" width="500">
 
 ## Day one - sourcing the information of the wrecks. 
-During the research, maps with shipwrecks plotted were found but what was required was the source data.
+The project started by research various website to obtain the raw data required. Maps with shipwrecks plotted were found but finding the underlying data source was not so easy.
 
 Data on [Marine Scotland](http://marine.gov.scot/information/wrecks-hes), [Aberdeenshire Council's website](https://online.aberdeenshire.gov.uk/smrpub/master/search.aspx) and on [Canmore's website](http://portal.historicenvironment.scot/downloads/canmore) were considered. 
 
