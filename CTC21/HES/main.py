@@ -9,6 +9,7 @@ valid_grid_ref = ['HO','HP','HT','HU','HW','HX','HY','HZ','NA','NB','NC','ND','N
                   'NN','NO','NP','NR','NS','NT','NU','NW','NX','NY','NZ','OV','SC','SD','SE','SH','SJ','SK','SM','SN',
                   'SO','SP','SR','SS','ST','SU','SV','SW','SX','SY','SZ','TA','TF','TG','TL','TM','TQ','TR','TV']
 
+
 def main():
     with open('councils.csv', mode='r') as raw_input:
         reader = csv.reader(raw_input)
@@ -24,13 +25,18 @@ def main():
         records = sf.shapeRecords()
 
     for rec in records:
-        if rec.record[12][:2] in valid_grid_ref and len(rec.record[12]) == 14:
+        if rec.record[12][:2] in valid_grid_ref:
             rec_class = generate_class(rec, council_dict, type_dict)
             complete_list.append(rec_class)
 
     with open('output.txt', mode="w") as output_text:
         for rec_class in complete_list:
             output_text.write(rec_class.create_string()+"\n")
+
+    """for rec in records:
+        can_id = rec.record[14].split('/')[-2]
+        if can_id == "292341":
+            print_record(rec, council_dict, type_dict)"""
 
 
 def generate_class(rec, council_dict, type_dict):
