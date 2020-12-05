@@ -14,7 +14,6 @@ def main():
     with open('wd_existing.csv', mode='r') as raw_input:
         reader = csv.reader(raw_input)
         wd_exists_list  = [rows[0] for rows in reader]
-        print (wd_exists_list)
 
     with open('councils.csv', mode='r') as raw_input:
         reader = csv.reader(raw_input)
@@ -30,7 +29,8 @@ def main():
         records = sf.shapeRecords()
 
     for rec in records:
-        if rec.record[12][:2] in valid_grid_ref:
+        #added check for existing records in the AND clause
+        if rec.record[12][:2] in valid_grid_ref and not rec.record[14].split('/')[-2] in wd_exists_list:
             rec_class = generate_class(rec, council_dict, type_dict)
             complete_list.append(rec_class)
 
