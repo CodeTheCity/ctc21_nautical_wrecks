@@ -11,6 +11,11 @@ valid_grid_ref = ['HO','HP','HT','HU','HW','HX','HY','HZ','NA','NB','NC','ND','N
 
 
 def main():
+    with open('wd_existing.csv', mode='r') as raw_input:
+        reader = csv.reader(raw_input)
+        wd_exists_list  = [rows[0] for rows in reader]
+        print (wd_exists_list)
+
     with open('councils.csv', mode='r') as raw_input:
         reader = csv.reader(raw_input)
         council_dict = {rows[1]: rows[0] for rows in reader}

@@ -1,6 +1,9 @@
 class Shipwreck:
     def __init__(self, name, ship_type, council_name, loc, can_id):
-        self.name = name
+        if name.lower() != "unknown":
+            self.name = name
+        else:
+            self.name = "Unnamed shipwreck - Canmore " + can_id
         self.ship_type = ship_type
         if council_name != "Q00000":
             self.council = council_name
