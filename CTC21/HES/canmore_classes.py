@@ -16,8 +16,8 @@ class Shipwreck:
     def create_string(self):
         return(
             "CREATE\n"
-            f'LAST\tLen\t"{self.name}"\n'
-            f'LAST\tDen\t"Shipwreck added as part of CTC21"\n'
+            f'LAST\tLen\t""{self.name}""\n'
+            f'LAST\tDen\t""Shipwreck added as part of CTC21""\n'
             f"LAST\tP31\t{self.ship_type}\n"
             f"LAST\tP31\tQ852190\n"
             f"LAST\tP17\tQ145\n"
@@ -25,5 +25,5 @@ class Shipwreck:
             f"LAST\tP625\t{self.location}\n"
             f"LAST\tP793\tQ906512\n"
             f"LAST\tP1343\tQ5032525\n"
-            f'LAST\tP718\t"{self.can_id}"'
+            f'LAST\tP718\t""{self.can_id}""'
         )

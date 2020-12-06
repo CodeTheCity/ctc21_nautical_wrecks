@@ -2,7 +2,8 @@ import shapefile as shp
 import OSGridConverter as OSGC
 import csv
 from canmore_classes import Shipwreck
-
+wd_name_list = []
+canmore_id_list = []
 
 complete_list = []
 valid_grid_ref = ['HO','HP','HT','HU','HW','HX','HY','HZ','NA','NB','NC','ND','NE','NF','NG','NH','NJ','NK','NL','NM',
@@ -11,9 +12,16 @@ valid_grid_ref = ['HO','HP','HT','HU','HW','HX','HY','HZ','NA','NB','NC','ND','N
 
 
 def main():
+    global wd_exists_list, wd_name_list
+
     with open('wd_existing.csv', mode='r') as raw_input:
         reader = csv.reader(raw_input)
-        wd_exists_list  = [rows[0] for rows in reader]
+        canmore_id_list = [row[0] for row in reader]
+
+    with open('WD_labels.csv', mode='r') as raw_input:
+        reader = csv.reader(raw_input)
+        wd_name_list = [row[0] for row in reader]
+        print(wd_name_list)
 
     with open('councils.csv', mode='r') as raw_input:
         reader = csv.reader(raw_input)
@@ -30,7 +38,7 @@ def main():
 
     for rec in records:
         #added check for existing records in the AND clause
-        if rec.record[12][:2] in valid_grid_ref and not rec.record[14].split('/')[-2] in wd_exists_list:
+        if rec.record[12][:2] in valid_grid_ref and not rec.record[14].split('/')[-2] in canmore_id_list:
             rec_class = generate_class(rec, council_dict, type_dict)
             complete_list.append(rec_class)
 
@@ -45,13 +53,17 @@ def main():
 
 
 def generate_class(rec, council_dict, type_dict):
-    name = tidy_string(rec.record[2].split(":")[0])
+    global wd_name_list
+    can_id = rec.record[14].split('/')[-2]
+    if rec.record[2].split(":")[0] not in wd_name_list:
+        name = tidy_string(rec.record[2].split(":")[0])
+    else:
+        name = tidy_string(rec.record[2].split(":")[0]) + " " + can_id
     ship_type = get_type_Q(rec.record[5], type_dict)
     council = council_dict[tidy_string(rec.record[7])]
     gr = rec.record[12]
     latlong = convert_coords(gr)
     loc = f"@{latlong.latitude}/{latlong.longitude}"
-    can_id = rec.record[14].split('/')[-2]
     my_class = Shipwreck(name, ship_type, council, loc, can_id)
     return my_class
 
